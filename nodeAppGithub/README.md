@@ -12,7 +12,7 @@ You will need to :
 5. You can now **build** your docker image & **run** the docker container hosting your app (useful for [CD-like](https://en.wikipedia.org/wiki/Continuous_delivery) workflow).
 
 `docker build -t nodeapp .`
-> Don't forget the dot (**.**) at the end or it won't read your dockerfile.
+> Don't forget the dot (**.**) at the end or docker won't read your Dockerfile.
 
 `docker run -d nodeapp`
-> You can drop the "-d" flag if you want the direct console output, altougth exiting the console will kill your container.
+> You can drop the "**-d**" flag if you want the direct console output, altougth exiting the console will kill your container.

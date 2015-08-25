@@ -1,4 +1,4 @@
-# Call of Duty 2 server on Ubuntu
+# Call of Duty 2 server
 
 This dockerfile create an image to deploy a [Call of Duty 2](https://en.wikipedia.org/wiki/Call_of_Duty_2) multiplayer server on Ubuntu.
 

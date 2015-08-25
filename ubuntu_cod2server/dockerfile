@@ -1,0 +1,25 @@
+FROM ubuntu
+MAINTAINER bgauduchon
+
+# adding i386 architecture
+RUN sudo dpkg --add-architecture i386
+
+# update system & install 32bits libraries (needed for gcc 3.3.4 library use by cod2_lnxded)
+RUN apt-get update
+RUN apt-get install -y \
+        libstdc++5:i386
+
+# add cod2 user & permissions
+RUN useradd cod2
+ADD cod2server /home/cod2
+RUN chown -R cod2:cod2 /home/cod2
+
+# switch user
+USER cod2
+
+# expose server port
+EXPOSE 28960
+
+# launch server
+WORKDIR /home/cod2
+ENTRYPOINT ./cod2_lnxded +exec config.cfg

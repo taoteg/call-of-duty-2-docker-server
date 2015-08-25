@@ -9,5 +9,5 @@ If you are not familiar with docker (docker engine, docker hub, dockerfiles, doc
 
 I also strongly recommend reading the [best practices for writing dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) for a better understanding and a cleaner writing of dockerfiles.
 
-**Docker is awesome**, give it a try ;-)
+**[Docker](https://www.docker.com/) is awesome**, give it a try ;-)
 

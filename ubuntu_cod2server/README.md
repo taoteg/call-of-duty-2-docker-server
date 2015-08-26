@@ -33,4 +33,4 @@ Clone or download the repository and follow theses steps to get ready :
 
 > if you didn't, [this](http://killtube.org/showthread.php?1337-CoD2-Tutorial-How-to-make-your-cracked-server-show-up-in-the-master-list) might help your pervert mind create a visible-pirate-hacked-uberawesome server.
 
-* The gcc3-libs in the `cod2server` folder was used as a workaround before finding a proper solution to add it using official repositories (32 / 64 bit gcc library issues as dicussed [here](http://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit/454254#454254). It is not used anymoer but will stay here as a backup, just in case it would not be supported anymore.
+* The gcc3-libs in the `cod2server` folder was used as a workaround before finding a proper solution to add it using official repositories (32 / 64 bit gcc library issues as dicussed [here](http://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit/454254#454254)). It is not used anymoer but will stay here as a backup, just in case it would not be supported anymore.

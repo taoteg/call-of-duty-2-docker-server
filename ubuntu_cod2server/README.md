@@ -30,4 +30,7 @@ Clone or download the repository and follow theses steps to get ready :
 * There is a similar repository on github which propose a Call of Duty 2 server based on CentOS : [hberntsen/docker-cod2](https://github.com/hberntsen/docker-cod2)
 * The config file located in `cod2server/main/config.cfg` can be edited to suit your needs. As *hberntsen* state, you could also use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to load it from outside your container.
 * You will find original and modified `cod2_lnxded` binaries in the `backup` folder. It might be usefull if you want to create a cracked server to play on without a CD key. But you won't need this as you did buy the game, didn't you ? 
+
+> if you didn't, [this](http://killtube.org/showthread.php?1337-CoD2-Tutorial-How-to-make-your-cracked-server-show-up-in-the-master-list) might help your pervert mind create a visible-pirate-hacked-uberawesome server.
+
 * The gcc3-libs in the `cod2server` folder was used as a workaround before finding a proper solution to add it using official repositories (32 / 64 bit gcc library issues). It is not used anymoer but will stay here as a backup, just in case it would not be supported anymore.

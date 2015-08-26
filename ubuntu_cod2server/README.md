@@ -28,7 +28,7 @@ Clone or download the repository and follow theses steps to get ready :
 * You might want to use a separated user to launch your docker container. In this case do not forget to add him to the docker group : `sudo gpasswd -a USER\_NAME docker`, and restart docker dameon : `sudo service docker restart`.
 * You also might want to [automate the container startup at server boot](https://docs.docker.com/articles/host_integration/).
 * There is a similar repository on github which propose a Call of Duty 2 server based on CentOS : [hberntsen/docker-cod2](https://github.com/hberntsen/docker-cod2)
-* The config file located in `cod2server/main/config.cfg` can be edited to suit your needs. As *hberntsen* state, you could also use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to load it from outside your container.
+* The config file located in `cod2server/main/config.cfg` can be edited to suits your needs. As *hberntsen* state, you could also use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to load it from outside your container.
 * You will find original and modified `cod2_lnxded` binaries in the `backup` folder. It might be usefull if you want to create a cracked server to play on without a CD key. But you won't need this as you did buy the game, didn't you ? 
 
 > if you didn't, [this](http://killtube.org/showthread.php?1337-CoD2-Tutorial-How-to-make-your-cracked-server-show-up-in-the-master-list) might help your pervert mind create a visible-pirate-hacked-uberawesome server.

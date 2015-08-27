@@ -11,15 +11,19 @@ RUN apt-get install -y \
 
 # add cod2 user & permissions
 RUN useradd cod2
-ADD cod2server /home/cod2
+RUN mkdir /home/cod2
 RUN chown -R cod2:cod2 /home/cod2
 
 # switch user
 USER cod2
 
-# expose server port
+# expose gaming port
 EXPOSE 28960
 
+# expose master server port
+EXPOSE 20510
+
 # launch server
-WORKDIR /home/cod2
+WORKDIR /home/cod2/cod2server
 ENTRYPOINT ./cod2_lnxded +exec config.cfg
+

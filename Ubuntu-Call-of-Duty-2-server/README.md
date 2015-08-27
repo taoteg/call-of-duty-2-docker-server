@@ -20,7 +20,7 @@ Clone or download the repository and follow theses steps to get ready :
   2. copy all the `iw_XX.iwd` from 00 to **14** to the `cod2server/main` folder (you want to keep the 15 already in place, as it was unpacked from the dedicated server) ;
   3. copy all the localizations `localized_english_iwXX.iwd` to the `cod2server/main` (it might be another language).
 3. go in the `docker` folder, and build the docker image : `docker build -t cod2server .` (don't forget the **dot** at the end).
-4. launch the container : `docker run -it -d -p 28960:28960/udp -p 20510:20510/udp -v /path/to/cod2server:/home/cod2/cod2server cod2server`. Don't forget to update the path of the `cod2server` folder to fit your configuration. 
+4. launch the container : `docker run -it -d -p 28960:28960/udp -p 20510:20510/udp -v /path/to/cod2server:/home/cod2/cod2server cod2server`. Don't forget to update the path of the `cod2server` folder in the docker command to fit your configuration. 
 
 > We use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to read the game files & configuration : our local `cod2server` is mounted in our container. It allow us to update the configuration without rebuilding the docker image : we only have to relaunch the container after changes.
 

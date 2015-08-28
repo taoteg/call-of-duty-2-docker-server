@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04.3
 MAINTAINER bgauduchon
 
 # adding i386 architecture

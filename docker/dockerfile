@@ -1,5 +1,4 @@
-#FROM ubuntu:14.04.3
-FROM debian:latest
+FROM debian:stable
 MAINTAINER bgauduchon
 
 # adding i386 architecture
@@ -12,13 +11,17 @@ RUN dpkg --add-architecture i386 && \
 # add cod2 user & permissions
 	useradd cod2 && \
 	mkdir /home/cod2 && \
-	chown -R cod2:cod2 /home/cod2
+	chown -R cod2:cod2 /home/cod2 && \
 
-# switch user
+# cleanup
+	rm -rf /var/lib/apt/lists /tmp/* && \
+	apt-get autoremove -y
+
+# switch to cod2 user
 USER cod2
 
 # expose gaming port & master server port
-EXPOSE 28960 20510
+EXPOSE 28960/udp 20510/udp
 
 # launch server
 WORKDIR /home/cod2/cod2server

@@ -1,6 +1,6 @@
-# Call of Duty 2 server
+# Call of Duty 2 server meet docker
 
-This dockerfile create an image to deploy a [Call of Duty 2](https://en.wikipedia.org/wiki/Call_of_Duty_2) multiplayer server on Ubuntu .
+Ccreate a docker image to deploy a [Call of Duty 2](https://en.wikipedia.org/wiki/Call_of_Duty_2) multiplayer server in an ubuntu container.
 
 ## Prerequisite
 
@@ -8,7 +8,7 @@ You need the following things :
 
 1. the linux dedicated server binary, which can be found in this repository ;
 2. the orginal game, as it's content is used by the dedicated server ;
-3. A host machine of your choice with x86_64 architecture
+3. a host machine of your choice with x86_64 architecture ;
 4. [docker](https://www.docker.com/) installed and configured on your host machine, obviously.
 
 ## Usage (unix)

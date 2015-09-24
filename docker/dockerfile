@@ -26,4 +26,3 @@ EXPOSE 28960/udp 20510/udp
 # launch server
 WORKDIR /home/cod2/cod2server
 ENTRYPOINT ./cod2_lnxded +exec config.cfg
-

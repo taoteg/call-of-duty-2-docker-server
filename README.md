@@ -1,6 +1,6 @@
 # Call of Duty 2 server meet docker
 
-Ccreate a docker image to deploy a [Call of Duty 2](https://en.wikipedia.org/wiki/Call_of_Duty_2) multiplayer server in an ubuntu container.
+Ccreate a docker image to deploy a [Call of Duty 2](https://en.wikipedia.org/wiki/Call_of_Duty_2) multiplayer server in a container.
 
 ## Prerequisite
 
@@ -17,13 +17,14 @@ Clone or download the repository and follow theses steps to get the server up an
 
 1. copy the required data from the game to the server :
   1. go in the `main` folder of your original game (install directory or retail DVD);
-  2. copy all the `iw_XX.iwd` from 00 to **14** to the `cod2server/main` folder (you want to keep the 15 already in place, as it was unpacked from the dedicated server) ;
+  2. copy all the `iw_XX.iwd` from 00 to 15 to the `cod2server/main` folder;
   3. copy all the localizations `localized_english_iwXX.iwd` to the `cod2server/main` (it might be another language).
-2. go in the `docker` folder, and build the docker image : `docker build -t cod2server .` (don't forget the **dot** at the end).
-3. launch the container : `docker run -it -d -p 28960:28960/udp -p 20510:20510/udp -v /path/to/cod2server:/home/cod2/cod2server cod2server`. Don't forget to update the path of the `cod2server` folder in the docker command to fit your configuration. 
-4. Depending on your setup, you might have some port-forwarding to do.
+2. go in the `docker` folder, and build the docker image : `docker build -t cod2server .` (don't forget the **dot** at the end) ;
+3. go in the `cod2server` folder and make the server binary executable : `chmod +x cod2_lnxded` ;
+4. launch the container : `docker run -it -d -p 28960:28960/udp -p 20510:20510/udp -v /path/to/cod2server:ro /home/cod2/cod2server cod2server`. Don't forget to update the path of the `cod2server` folder in the docker command to fit your configuration. ;
+5. Depending on your setup, you might have some port-forwarding to do.
 
-> We use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to read the game files & configuration : our local `cod2server` folder is mounted in our container. It allow us to update the configuration without rebuilding the docker image : we only have to relaunch the container after changes.
+> We use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to read the game server files & configuration : our local `cod2server` folder is mounted in our container in read only mode. It allow us to update the configurations settings without rebuilding the docker image : we only have to relaunch the container after changes.
 
 ## Notes
 

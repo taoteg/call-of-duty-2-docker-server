@@ -46,3 +46,10 @@ If you are not familiar with docker (docker engine, docker hub, dockerfiles, doc
 I also strongly recommend reading the [best practices for writing dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) for a better understanding and a cleaner writing of dockerfiles.
 
 **[Docker](https://www.docker.com/) is awesome**, give it a try ;-)
+
+## TODO list
+
+* Try to minimize the docker image using Scratch or Alpine instead of full featured OSs images (this implies to manually import all libraries and more) ;
+* Change `docker run` command to a more common way (only using daemon `-d` flag and `docker attach` later) ;
+* Find a way to handle server logs (in the container ? on the monted volume ?) ;
+* Use a script to auto-start the container (upstart or equivalent) instead of the docker`--restart=always` flag.

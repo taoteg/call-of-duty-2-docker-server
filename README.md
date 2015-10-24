@@ -21,7 +21,7 @@ Clone or download the repository and follow theses steps to get the server up an
   3. copy all the localizations `localized_english_iwXX.iwd` to the `cod2server/main` (it might be another language).
 2. go in the `docker` folder, and build the docker image : `docker build -t cod2server .` (don't forget the **dot** at the end) ;
 3. go in the `cod2server` folder and make the server binary executable : `chmod +x cod2_lnxded` ;
-4. launch the container : `docker run -it -d -p 28960:28960/udp -p 20510:20510/udp -v /path/to/cod2server:ro /home/cod2/cod2server cod2server`. Don't forget to update the path of the `cod2server` folder in the docker command to fit your configuration. ;
+4. launch the container : `docker run -d -p 28960:28960/udp -p 20510:20510/udp -v /absolute/path/to/cod2server:/home/cod2/cod2server:ro cod2server`. Don't forget to update the path of the `cod2server` folder in the docker command to fit your configuration. ;
 5. Depending on your setup, you might have some port-forwarding to do.
 
 > We use [docker volumes](https://docs.docker.com/userguide/dockervolumes/) to read the game server files & configurations : our local `cod2server` folder is mounted in our container in read only mode. It allow us to update the configurations settings without rebuilding the docker image : we only have to relaunch the container after changes.
